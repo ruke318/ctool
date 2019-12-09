@@ -1,84 +1,9 @@
 [
     {
         "user": "root",
-        "host": "118.24.199.162:22",
-        "pass": "Youxue_web666!",
+        "host": "1.24.32.3:22",
+        "pass": "sssss!",
         "desc": "报名系统测试机",
         "cmd": ""
-    },
-    {
-        "user": "root",
-        "host": "123.59.150.140:22",
-        "pass": "FdYuhd4h3PKv",
-        "desc": "报名系统正式环境",
-        "cmd": ""
-    },
-    {
-        "user": "root",
-        "host": "180.76.111.107:22",
-        "pass": "qwer@4321*#06#",
-        "desc": "mongo, mq",
-        "cmd": ""
-    },
-    {
-        "user": "root",
-        "host": "106.75.12.230:22",
-        "pass": "ja7QzHET7FGv",
-        "desc": "dsp测试环境",
-        "cmd": "su work"
-    },
-    {
-        "user": "test",
-        "host": "47.93.196.122:60022",
-        "pass": "_2CeuhT2LqUejNMkdf6JXC86b",
-        "desc": "阿里云跳板机"
-    },
-    {
-        "user": "root",
-        "host": "app.itruke.com:22",
-        "pass": "jx@ITBOY",
-        "desc": "博客机器"
-    },
-    {
-        "user": "root",
-        "host": "ruke.xyz:12345",
-        "pass": "jx_crh0320",
-        "desc": "搬瓦工机器"
-    },
-    {
-        "user": "readonly",
-        "host": "106.75.16.183:22222",
-        "pass": "K*Bt9&3H/zc8",
-        "desc": "ucloud跳板机"
-    },
-    {
-        "user": "root",
-        "host": "10.10.110.97:22",
-        "pass": "ja7QzHET7FGv",
-        "desc": "ucloud中控机"
-    },
-    {
-        "user": "root",
-        "host": "10.19.187.15:22",
-        "pass": "ja7QzHET7FGv",
-        "desc": "es-node-1"
-    },
-    {
-        "user": "root",
-        "host": "10.19.145.2:22",
-        "pass": "ja7QzHET7FGv",
-        "desc": "es-node-2"
-    },
-    {
-        "user": "root",
-        "host": "10.19.143.137:22",
-        "pass": "ja7QzHET7FGv",
-        "desc": "es-node-3"
-    },
-    {
-        "user": "root",
-        "host": "10.10.110.97:22",
-        "key": "/Users/chenrenhuan/.ssh/id_rsa",
-        "desc": "go-doushen-tool"
     }
 ]
