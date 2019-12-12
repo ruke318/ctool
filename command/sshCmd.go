@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"ctool/helper"
 	"fmt"
-	"github.com/jinzhu/configor"
 	"os"
 	"strconv"
 	"strings"
@@ -21,7 +20,8 @@ type result struct {
 
 func (s *SshCmd) Run() {
 	var conf []helper.SshConf
-	configor.Load(&conf, "/Users/chenrenhuan/server/config.json")
+	config := helper.LoadConf()
+	conf = config.SshHost
 	ShowList(conf)
 	nums := ""
 	for {

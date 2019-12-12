@@ -3,7 +3,6 @@ package command
 import (
 	"ctool/helper"
 	"fmt"
-	"github.com/jinzhu/configor"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/terminal"
 	"io"
@@ -29,7 +28,8 @@ type SSHTerminal struct {
 //当前登录机器
 func (s *SshLogin) Login(number int, clear bool) {
 	var conf []helper.SshConf
-	configor.Load(&conf, "/Users/chenrenhuan/server/config.json")
+	config := helper.LoadConf()
+	conf = config.SshHost
 	//自定义接收参数
 	if number == 0 {
 		ShowList(conf)
