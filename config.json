@@ -2,8 +2,8 @@
   "sshHost": [
     {
       "user": "root",
-      "host": "118.24.199.162:22",
-      "pass": "Youxue_web666!",
+      "host": "118.24.4.162:22",
+      "pass": "!",
       "desc": "报名系统测试机",
       "cmd": ""
     }
