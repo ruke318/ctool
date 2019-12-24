@@ -22,6 +22,8 @@ func (s *SshCmd) Run() {
 	var conf []helper.SshConf
 	config := helper.LoadConf()
 	conf = config.SshHost
+
+	Select:
 	ShowList(conf)
 	nums := ""
 	for {
@@ -48,6 +50,8 @@ func (s *SshCmd) Run() {
 			}
 		}
 	}
+
+	RunCmd:
 	if len(selected) == 0 {
 		fmt.Println("你没有选择机器")
 		return
@@ -80,6 +84,23 @@ func (s *SshCmd) Run() {
 		data = append(data, item)
 	}
 	s.showData(data)
+
+	// 执行菜单
+	repeat := ""
+	for {
+		if repeat != "" {
+			break
+		}
+		fmt.Print(strings.Repeat("-", 30))
+		fmt.Print("1-继续执行命令, 2-选择机器, 其他-退出")
+		fmt.Println(strings.Repeat("-", 30))
+		fmt.Scanln(&repeat)
+	}
+
+	switch repeat {
+		case "1": goto RunCmd
+		case "2": goto Select
+	}
 	return
 }
 

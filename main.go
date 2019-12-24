@@ -10,6 +10,10 @@ var runCmd = flag.Bool("cmd", false, "批量执行 cmd")
 var num = flag.Int("n", 0, "登录机器编号")
 var clear = flag.Bool("c", false, "不执行配置中的 cmd 项")
 
+var dev = flag.Bool("test", false, "测试!!!")
+
+//检测文件变化
+
 func main() {
 	flag.Parse()
 	if *runCmd {
