@@ -3,17 +3,18 @@ package command
 import (
 	"ctool/helper"
 	"fmt"
-	"golang.org/x/crypto/ssh"
-	"golang.org/x/crypto/ssh/terminal"
 	"io"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+
+	"golang.org/x/crypto/ssh"
+	"golang.org/x/crypto/ssh/terminal"
 )
 
 type SshLogin struct {
-	curr helper.SshConf
+	curr   helper.SshConf
 	notCmd bool
 }
 
@@ -32,18 +33,18 @@ func (s *SshLogin) Login(number int, clear bool) {
 	conf = config.SshHost
 	//自定义接收参数
 	if number == 0 {
-		ShowList(conf)
-		fmt.Println("请选择你要登录的机器的编号: ")
-		fmt.Scanln(&number)
+		number = SelectHost(conf) + 1
 	}
-	for {
-		if number > 0 && number <= len(conf) {
-			break
-		}
-		ShowList(conf)
-		fmt.Println("请输入正确的机器的编号: ")
-		fmt.Scanln(&number)
+	if number <= 0 {
+		fmt.Errorf("exit: (%d) \n", -2)
+		return
 	}
+	// for {
+	// 	if number > 0 && number <= len(conf) {
+	// 		break
+	// 	}
+	// 	number = SelectHost(conf) + 1
+	// }
 	s.curr = conf[number-1]
 	s.notCmd = clear
 	fmt.Printf("正在登录: %v 】%v(%v)... \n\n", number, s.curr.Desc, s.curr.Host)

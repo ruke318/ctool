@@ -3,10 +3,11 @@ package helper
 import (
 	"errors"
 	// "fmt"
-	"github.com/mitchellh/go-homedir"
-	"golang.org/x/crypto/ssh"
 	"io/ioutil"
 	"time"
+
+	"github.com/mitchellh/go-homedir"
+	"golang.org/x/crypto/ssh"
 )
 
 type SSHTerminal struct {
@@ -21,6 +22,7 @@ type SshConf struct {
 	Pass string `json:"pass"`
 	Desc string `json:"desc"`
 	Cmd  string `json:"cmd"`
+	Num  int
 }
 
 // 执行 命令返回结果
